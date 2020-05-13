@@ -14,11 +14,11 @@ $(document).ready(function(){
         let troco = $("#troco_pedido").val();
 
         var whatsappMessage= "*Pedido via Site*"+"\r\n\r\n"
-        +"Sabor: "+ sabor
-        +"Cliente: "+ nome
-        +"Telefone: "+ telefone
-        +"Endereço de entrega: "+ endereco
-        +"Pagamento: "+ pagamento
+        +"Sabor: "+ sabor +"\r\n"
+        +"Cliente: "+ nome+"\r\n"
+        +"Telefone: "+ telefone+"\r\n"
+        +"Endereço de entrega: "+ endereco+"\r\n"
+        +"Pagamento: "+ pagamento+"\r\n"
         +"Troco: "+ troco;
 
         whatsappMessage = window.encodeURIComponent(whatsappMessage);
