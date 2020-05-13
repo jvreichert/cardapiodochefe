@@ -22,6 +22,6 @@ $(document).ready(function(){
         +"Troco: "+ troco;
 
         whatsappMessage = window.encodeURIComponent(whatsappMessage);
-        window.open('https://api.whatsapp.com/send?phone=+5517988219946&text='+whatsappMessage, '_blank');
+        window.open('https://api.whatsapp.com/send?phone=+5517991055329&text='+whatsappMessage, '_blank');
     });
 })
