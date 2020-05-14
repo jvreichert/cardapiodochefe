@@ -135,12 +135,14 @@ $(document).ready(function () {
             let endereco = $('input[name="metodoEntrega"]:checked').val() + "\n" + $("#endereco_pedido").val();
             let pagamento = $('input[name="paymentMethod"]:checked').val();
             let troco = $("#troco_pedido").val();
-            let bairro = $("#bairro_pedido option:selected");
+            let bairro = $("#bairro_pedido option:selected").text();
+            let valorFrete = $("#bairro_pedido option:selected").val();
+
             carrinho.forEach(function (element, index) {
                 if (element.inteira == "") {
-                    sabor += "01" + element.meia1 + " e " + element.meia2 + "(" + element.tipo + ")" + "\n"
+                    sabor += "01 " + element.meia1 + " e " + element.meia2 + "(" + element.tipo + ")" + "\n"
                 } else {
-                    sabor += "01" + element.inteira + "(" + element.tipo + ")" + "\n"
+                    sabor += "01 " + element.inteira + "(" + element.tipo + ")" + "\n"
                 }
             });
 
@@ -149,12 +151,12 @@ $(document).ready(function () {
                 "- Cliente: " + nome + "\n" +
                 "- Telefone: " + telefone + "\n" +
                 "- Entrega: " + endereco + "\n" +
-                "- Bairro: " + bairro.html() + "\n"
-                "- Preço Entrega: R$" + bairro.val() + "\n"
+                "- Bairro: " + bairro + "\n" +
+                "- Preço Entrega: R$" + valorFrete + "\n" +
                 "- Pagamento: " + pagamento + "\r\n\r\n" +
-                "- Total: " + $("#valor-total").html() + "\n" +
+                "- Total: " + $("#valor-total").text() + "\n" +
                 "- Troco: " + troco;
-
+                debugger;
             whatsappMessage = window.encodeURIComponent(whatsappMessage);
             window.open('https://api.whatsapp.com/send?phone=+5517991055329&text=' + whatsappMessage, '_blank');
         })
