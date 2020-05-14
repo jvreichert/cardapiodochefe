@@ -116,7 +116,7 @@ $(document).ready(function () {
                 } else {
                     nomeProduto = element.inteira
                 }
-                $("#ul-carrinho").append('<li class="list-group-item d-flex justify-content-between lh-condensed">' +
+                $("#ul-carrinho").append('<li class="list-group-item d-flex justify-content-between lh-condensed itens-carrinho">' +
                     '<div>' +
                     '<h6 class="my-0">' + nomeProduto + '</h6>' +
                     '<small class="text-muted">' + element.tipo + '</small>' +
@@ -135,6 +135,7 @@ $(document).ready(function () {
             let endereco = $("#endereco_pedido").val();
             let pagamento = $('input[name="paymentMethod"]:checked').val();
             let troco = $("#troco_pedido").val();
+            let bairro =  $("#bairro_pedido option:selected");
             carrinho.forEach(function (element, index) {
                 if (element.inteira == "") {
                     sabor += element.meia1 + " e " + element.meia2 + "(" + element.tipo + ")" + "\n"
@@ -148,10 +149,52 @@ $(document).ready(function () {
                 "- Cliente: " + nome + "\n" +
                 "- Telefone: " + telefone + "\n" +
                 "- Endereço de entrega: " + endereco + "\n" +
-                "- Pagamento: " + pagamento + "\n" +
+                "- Bairro: " +  bairro.html() + "\n"
+                "- Preço Entrega: R$" + bairro.val() + "\n"
+                "- Pagamento: " + pagamento + "\n\n" +
+                "- Total: " + $("#valor-total").html() + "\n" +
                 "- Troco: " + troco;
 
             whatsappMessage = window.encodeURIComponent(whatsappMessage);
             window.open('https://api.whatsapp.com/send?phone=+5517991055329&text=' + whatsappMessage, '_blank');
+        })
+        .on("change", 'input[name="metodoEntrega"]', function () {
+            if ($('input[name="metodoEntrega"]:checked').val() == "delivery") {
+                $(".dados-delivery").slideDown()
+                bootbox.alert("Selecione o bairro para saber o valor da entrega.")
+            } else {
+                $(".dados-delivery").slideUp()
+            }
+        })
+        .on("change", "#bairro_pedido", function () {
+            $(".frete-carrinho").remove();
+            $(".itens-carrinho").remove();
+
+            let total = 0;
+            carrinho.forEach(function (element, index) {
+                let nomeProduto = "";
+                if (element.inteira == "") {
+                    nomeProduto = element.meia1 + " e " + element.meia2
+                } else {
+                    nomeProduto = element.inteira
+                }
+                $("#ul-carrinho").append('<li class="list-group-item d-flex justify-content-between lh-condensed itens-carrinho">' +
+                    '<div>' +
+                    '<h6 class="my-0">' + nomeProduto + '</h6>' +
+                    '<small class="text-muted">' + element.tipo + '</small>' +
+                    '</div>' +
+                    '<span class="text-muted">R$ ' + element.preco + '</span>' +
+                    '</li>')
+                total += element.preco;
+            })
+
+            $("#ul-carrinho").append('<li class="list-group-item d-flex justify-content-between lh-condensed frete-carrinho">' +
+            '<div>' +
+            '<h6 class="my-0">Entrega</h6>' +
+            '</div>' +
+            '<span class="text-muted">R$ ' + $(this).val() + '</span>' +
+            '</li>')
+
+            $("#valor-total").html("R$ " + parseFloat(total+parseFloat($(this).val())))
         });
 })
