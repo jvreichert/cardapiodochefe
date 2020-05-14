@@ -138,9 +138,9 @@ $(document).ready(function () {
             let bairro = $("#bairro_pedido option:selected");
             carrinho.forEach(function (element, index) {
                 if (element.inteira == "") {
-                    sabor += element.meia1 + " e " + element.meia2 + "(" + element.tipo + ")" + "\n"
+                    sabor += "01" + element.meia1 + " e " + element.meia2 + "(" + element.tipo + ")" + "\n"
                 } else {
-                    sabor += element.inteira + "(" + element.tipo + ")" + "\n"
+                    sabor += "01" + element.inteira + "(" + element.tipo + ")" + "\n"
                 }
             });
 
@@ -150,8 +150,8 @@ $(document).ready(function () {
                 "- Telefone: " + telefone + "\n" +
                 "- Entrega: " + endereco + "\n" +
                 "- Bairro: " + bairro.html() + "\n"
-            "- Preço Entrega: R$" + bairro.val() + "\n"
-            "- Pagamento: " + pagamento + "\n\n" +
+                "- Preço Entrega: R$" + bairro.val() + "\n"
+                "- Pagamento: " + pagamento + "\r\n\r\n" +
                 "- Total: " + $("#valor-total").html() + "\n" +
                 "- Troco: " + troco;
 
