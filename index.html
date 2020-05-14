@@ -17,8 +17,11 @@
 <body>
     <div id="nav-placeholder"></div>
     <div class="container" id="divSabores">
-        <button type="button" class="btn btn-primary btn-lg btn-passo2">Finalizar pedido
-        </button>
+        <div>
+            <button type="button" class="btn btn-success btn-lg btn-passo2"
+                style="margin:10px; justify-content: end">Finalizar pedido
+            </button>
+        </div>
         <div class="card-deck text-center">
             <div class="card shadow-sm card-pizza">
                 <div class="card-header">
@@ -232,11 +235,11 @@
                         </div>
                     </div>
                     <div class="row">
-                            <div class="col-md-12 mb-3 troco-pedido">
-                                <label for="cc-name">Observações</label>
-                                <input type="text" class="form-control" id="observacoes" placeholder="" required="">
-                            </div>
+                        <div class="col-md-12 mb-3 troco-pedido">
+                            <label for="cc-name">Observações</label>
+                            <input type="text" class="form-control" id="observacoes" placeholder="" required="">
                         </div>
+                    </div>
                     <hr class="mb-4">
                     <button class="btn btn-primary btn-lg btn-block" id="fazer-pedido">Finalizar pedido</button>
                 </form>
