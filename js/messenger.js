@@ -144,6 +144,7 @@ $(document).ready(function () {
             let troco = $("#troco_pedido").val();
             let bairro = $("#bairro_pedido option:selected").text();
             let valorFrete = $("#bairro_pedido option:selected").val();
+            let obs = $("#observacoes").val();
 
             carrinho.forEach(function (element, index) {
                 if (element.inteira == "") {
@@ -162,7 +163,8 @@ $(document).ready(function () {
                 "- Preço Entrega: R$" + valorFrete + "\n" +
                 "- Pagamento: " + pagamento + "\r\n\r\n" +
                 "- Total: " + $("#valor-total").text() + "\n" +
-                "- Troco: " + troco;
+                "- Troco: " + troco + "\n" +
+                "- **Observações: " + obs;
 
             whatsappMessage = window.encodeURIComponent(whatsappMessage);
             window.open('https://api.whatsapp.com/send?phone=+5517991055329&text=' + whatsappMessage, '_blank');
