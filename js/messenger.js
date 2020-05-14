@@ -106,6 +106,10 @@ $(document).ready(function () {
             console.log(carrinho);
         })
         .on("click", ".btn-passo2", function () {
+            if (carrinho.length == 0) {
+                bootbox.alert("Seu carrinho está vazio, por favor escolha um produto");
+                return false;
+            }
             $("#divSabores").slideUp();
             $("#divFinalizaPedido").slideDown();
             let total = 0;
@@ -129,6 +133,9 @@ $(document).ready(function () {
             $("#valor-total").html("R$ " + parseFloat(total))
         })
         .on("click", "#fazer-pedido", function () {
+            if (!validator())
+                return false;
+
             $("#divFinalizaPedido").show();
             let nome = $("#nome_pedido").val();
             let telefone = $("#telefone_pedido").val();
@@ -156,7 +163,7 @@ $(document).ready(function () {
                 "- Pagamento: " + pagamento + "\r\n\r\n" +
                 "- Total: " + $("#valor-total").text() + "\n" +
                 "- Troco: " + troco;
-                debugger;
+
             whatsappMessage = window.encodeURIComponent(whatsappMessage);
             window.open('https://api.whatsapp.com/send?phone=+5517991055329&text=' + whatsappMessage, '_blank');
         })
@@ -206,4 +213,20 @@ $(document).ready(function () {
 
             $("#valor-total").html("R$ " + parseFloat(total + parseFloat($(this).val())))
         });
+
+
+    let validator = () => {
+        if ($("#nome_pedido").val() == "") {
+            bootbox.alert("Por favor, informe seu nome!");
+            return false;
+        } else if ($("#telefone_pedido").val() == "") {
+            bootbox.alert("Por favor, informe seu telefone!");
+            return false;
+        } else if ($("#endereco_pedido").is(":visible") && $("#endereco_pedido").val() == "") {
+            bootbox.alert("Por favor, informe seu endereço corretamente!");
+            return false;
+        }
+
+        return true;
+    }
 })
