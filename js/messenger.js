@@ -168,6 +168,13 @@ $(document).ready(function () {
                 $(".dados-delivery").slideUp()
             }
         })
+        .on("change", 'input[name="paymentMethod"]', function () {
+            if ($('input[name="paymentMethod"]:checked').val() == "dinheiro") {
+                $(".troco-pedido").slideDown()
+            } else {
+                $(".troco-pedido").slideUp()
+            }
+        })
         .on("change", "#bairro_pedido", function () {
             $(".frete-carrinho").remove();
             $(".itens-carrinho").remove();
