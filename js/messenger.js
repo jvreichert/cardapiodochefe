@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function () {
     let sabor = "";
     let carrinho = [];
