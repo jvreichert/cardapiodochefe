@@ -132,10 +132,10 @@ $(document).ready(function () {
             $("#divFinalizaPedido").show();
             let nome = $("#nome_pedido").val();
             let telefone = $("#telefone_pedido").val();
-            let endereco = $("#endereco_pedido").val();
+            let endereco = $('input[name="metodoEntrega"]:checked').val() + "\n" + $("#endereco_pedido").val();
             let pagamento = $('input[name="paymentMethod"]:checked').val();
             let troco = $("#troco_pedido").val();
-            let bairro =  $("#bairro_pedido option:selected");
+            let bairro = $("#bairro_pedido option:selected");
             carrinho.forEach(function (element, index) {
                 if (element.inteira == "") {
                     sabor += element.meia1 + " e " + element.meia2 + "(" + element.tipo + ")" + "\n"
@@ -148,10 +148,10 @@ $(document).ready(function () {
                 "- Sabor(es): " + sabor + "\n" +
                 "- Cliente: " + nome + "\n" +
                 "- Telefone: " + telefone + "\n" +
-                "- Endereço de entrega: " + endereco + "\n" +
-                "- Bairro: " +  bairro.html() + "\n"
-                "- Preço Entrega: R$" + bairro.val() + "\n"
-                "- Pagamento: " + pagamento + "\n\n" +
+                "- Entrega: " + endereco + "\n" +
+                "- Bairro: " + bairro.html() + "\n"
+            "- Preço Entrega: R$" + bairro.val() + "\n"
+            "- Pagamento: " + pagamento + "\n\n" +
                 "- Total: " + $("#valor-total").html() + "\n" +
                 "- Troco: " + troco;
 
@@ -189,12 +189,12 @@ $(document).ready(function () {
             })
 
             $("#ul-carrinho").append('<li class="list-group-item d-flex justify-content-between lh-condensed frete-carrinho">' +
-            '<div>' +
-            '<h6 class="my-0">Entrega</h6>' +
-            '</div>' +
-            '<span class="text-muted">R$ ' + $(this).val() + '</span>' +
-            '</li>')
+                '<div>' +
+                '<h6 class="my-0">Entrega</h6>' +
+                '</div>' +
+                '<span class="text-muted">R$ ' + $(this).val() + '</span>' +
+                '</li>')
 
-            $("#valor-total").html("R$ " + parseFloat(total+parseFloat($(this).val())))
+            $("#valor-total").html("R$ " + parseFloat(total + parseFloat($(this).val())))
         });
 })
