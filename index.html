@@ -1,905 +1,1332 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/page.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pizzaria do Chefe</title>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/messenger.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootbox.all.min.js"></script>
-</head>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/page.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pizzaria do Chefe</title>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/messenger.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootbox.all.min.js"></script>
+    </head>
 
-<body>
-    <div id="nav-placeholder"></div>
-    <div class="container" id="divSabores">
-        <div style="text-align: end">
-            <button type="button" class="btn btn-success btn-lg btn-passo2" style="margin:10px;">Finalizar pedido
-            </button>
+    <body style="background-color:#e9e9e9">
+        <div id="nav-placeholder"></div>
+        <div class="" id="divSabores">
+            <div class="container">
+                <div style="text-align: end">
+                    <button
+                        type="button"
+                        class="btn btn-success btn-lg btn-passo2"
+                        style="margin:10px;">Finalizar pedido
+                    </button>
+                </div>
+                <h2 class="my-0 font-weight-normal sabor-pizza">Sabores</h4>
+
+                <div class="row text-center">
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Mussarela</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela e Tomate</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 14,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="14">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="14">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 26,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="26">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="26">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Marguerita</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Manjericão e Tomate</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 14,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="14">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="14">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 26,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="26">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="26">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Bacon</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Tomate e Bacon</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 17,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="17">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="17">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 32,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="32">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="32">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Dois Queijos</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Requeijão e Tomate</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 16,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="16">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="16">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 30,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="30">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="30">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Três Queijos</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Requeijão e Provolone</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 17,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="17">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="17">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 33,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="33">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="33">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Quatro Queijos</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Requeijão, Provolone e Parmesão</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Calabresa</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Calabresa e Cebola</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 15,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="15">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="15">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 28,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="28">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="28">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Baiana</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Calabresa Moida, Cebola e
+                                        Pimenta Dedo de moça</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 15,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="15">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="15">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 28,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="28">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="28">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Calabresa com Requeijão</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Calabresa, Requeijão e Cebola</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 15,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="15">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="15">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 28,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="28">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="28">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Presunto e Mussarela</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Presunto Tomate e Mussarela</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 16,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="16">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="16">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 30,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="30">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="30">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Presunto Especial</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Presunto, Tomate, Requeijão, Mussarela e
+                                        Bacon</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Portuguesa</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Presunto, Ervilha, Palmito, Ovo,
+                                        Mussarela, Bacon e Cebola</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Frango com Bacon</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Frango, Mussarela e Bacon</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 17,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="17">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="17">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 33,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="33">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="33">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Frango com Requeijão</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Frango Requeijão e Mussarela</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Caipira</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Frango, Creme de Milho, Mussarela e Bacon</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Brocolis</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Brocolis, Requeijão, Tomate, Mussarela e
+                                        Bacon</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 34,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="34">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="34">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Vegetariana</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Brocolis, Palmito, Ervilha e Mussarela</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 16,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="16">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="16">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 30,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="30">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="30">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Serrana</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Lombo Canadense, Creme de Milho e Mussarela</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shadow-sm card-pizza col-md-4">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal sabor-pizza">Lombo</h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>Molho de Tomate, Orégano, Azeitona, Lombo Canadense, Requeijão e Mussarela</li>
+                                </ul>
+                                <div class="button-card col-md-12">
+                                    <div class="div-broto">
+                                        <h4>Broto R$ 18,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaBroto"
+                                            data-preco="18">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraBroto"
+                                            data-preco="18">Inteira
+                                        </button>
+                                    </div>
+                                    <div class="div-grande">
+                                        <h4>Grande R$ 35,00</h4>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheMeiaGrande"
+                                            data-preco="35">Meia
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnEscolheInteiraGrande"
+                                            data-preco="35">Inteira
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <h2 style="padding-top:15px;" class="my-0 font-weight-normal sabor-pizza">Bordas/Adicionais</h2>
+                    <div class="row text-center">
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Borda de Reiqueijão</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 10,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="10">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Borda de Mussarela</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 10,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="10">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Mussarela</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de mussarela para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 4,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="4">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Requeijão</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de Requeijão para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 4,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="4">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Bacon</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de Bacon para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 2,50</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="2.5">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Brocolis</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de Brocolis para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 3,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="3">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Tomate</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de Tomate para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 1,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="1">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Cebola</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de Cebola para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 1,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="1">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Adicional de Palmito</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>Adicional de Tomate para meia pizza</li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 2,50</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="2.5">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+                    <h2 style="padding-top:15px;" class="my-0 font-weight-normal sabor-pizza">Diversos</h2>
+                    <div class="row text-center">
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Trufa</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 2,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="2">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Pão de Mel</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 2,50</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="2.5">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Petit Gateau (Só bolinho)</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 3,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="3">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Cone Trufado</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 2,50</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="2.5">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shadow-sm card-pizza col-md-4">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal sabor-pizza">Brownie</h4>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li></li>
+                                    </ul>
+                                    <div class="button-card col-md-12">
+                                        <div class="div-grande">
+                                            <h4>R$ 3,00</h4>
+                                            <button type="button" class="btn btn-primary btnEscolhe" data-preco="3">Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row text-center">
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Mussarela</h4>
+
+        <div class="container" id="divFinalizaPedido" style="display:none">
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Seu carrinho</span>
+                    </h4>
+                    <ul class="list-group mb-3" id="ul-carrinho">
+
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong id="valor-total">R$ 0</strong>
+                        </li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela e Tomate</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 14,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="14">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="14">Inteira
-                                </button>
+                <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3">Dados de entrega</h4>
+                    <form class="needs-validation" novalidate="">
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input
+                                    id="ret-local"
+                                    name="metodoEntrega"
+                                    type="radio"
+                                    class="custom-control-input"
+                                    value="retirar no local"
+                                    required=""
+                                    checked="checked">
+                                <label class="custom-control-label" for="ret-local">Retirada no local</label>
                             </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 26,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="26">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="26">Inteira
-                                </button>
+                            <div class="custom-control custom-radio">
+                                <input
+                                    id="delivery"
+                                    name="metodoEntrega"
+                                    type="radio"
+                                    class="custom-control-input"
+                                    value="delivery"
+                                    required="">
+                                <label class="custom-control-label" for="delivery">Delivery</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Marguerita</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Manjericão e Tomate</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 14,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="14">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="14">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 26,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="26">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="26">Inteira
-                                </button>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="firstName">Seu nome</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nome_pedido"
+                                    placeholder=""
+                                    value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Bacon</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Tomate e Bacon</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 17,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="17">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="17">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 32,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="32">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="32">Inteira
-                                </button>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="firstName">Telefone de contato</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="telefone_pedido"
+                                    placeholder=""
+                                    value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Dois Queijos</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Requeijão e Tomate</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 16,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="16">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="16">Inteira
-                                </button>
+                        <div class="dados-delivery" style="display:none">
+                            <div class="mb-3">
+                                <label for="address">Endereço de entrega</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="endereco_pedido"
+                                    placeholder="Rua exemplo, numero 123, centro"
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                </div>
                             </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 30,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="30">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="30">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Três Queijos</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Requeijão e Provolone</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 17,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="17">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="17">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 33,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="33">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="33">Inteira
-                                </button>
+                            <div class="mb-3">
+                                <label for="address">Bairro</label>
+                                <select class="form-control" id="bairro_pedido">
+                                    <option value="0">Selecione</option>
+                                    <option value="4">CECAP</option>
+                                    <option value="3">COLORADO
+                                    </option>
+                                    <option value="3">JARDIM ANTUNES</option>
+                                    <option value="3">JARDIM ASTURIA</option>
+                                    <option value="3">JARDIM BIANCO
+                                    </option>
+                                    <option value="4">JARDIM BURITIS</option>
+                                    <option value="3">JARDIM DAS OLIVEIRAS</option>
+                                    <option value="4">JARDIM MACEDO</option>
+                                    <option value="3">JARDIM MARIA LUCIA</option>
+                                    <option value="5">JARDIM NUNES 1</option>
+                                    <option value="6">JARDIM NUNES 2</option>
+                                    <option value="6">JARDIM SANTO ANTONIO</option>
+                                    <option value="6">JARDIM SIMOES</option>
+                                    <option value="4">MACEDO TELES 1</option>
+                                    <option value="4">MACEDO TELES 2</option>
+                                    <option value="4">PARQUE RESIDENCIAL LARIANO TEBER</option>
+                                    <option value="4">RESIDECIAL PALESTRA</option>
+                                    <option value="3">RESIDENCIAL ANA ANGELICA</option>
+                                    <option value="3">RESIDENCIAL BOM SUCESSO</option>
+                                    <option value="3">RESIDENCIAL ETEMP</option>
+                                    <option value="3">RESIDENCIAL GABRIELA</option>
+                                    <option value="3">RESIDENCIAL MARIA ZORITA</option>
+                                    <option value="3">RESIDENCIAL MONTE VERDE</option>
+                                    <option value="4">RESIDENCIAL SÃO TOMAS 1</option>
+                                    <option value="4">RESIDENCIAL SÃO TOMAS 2</option>
+                                    <option value="3">SALO SAGRADO</option>
+                                    <option value="4">VETORAZZO</option>
+                                    <option value="3">VILA BURGUESE 1</option>
+                                    <option value="3">VILA BURGUESE 2
+                                    </option>
+                                    <option value="3">VILA BURGUESE 3</option>
+                                    <option value="3">VILA MAFALDA</option>
+                                    <option value="3">VILA MAFALDA 2</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        <h4 class="mb-3">Pagamento</h4>
 
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Quatro Queijos</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Requeijão, Provolone e Parmesão</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input
+                                    id="credit"
+                                    name="paymentMethod"
+                                    type="radio"
+                                    class="custom-control-input"
+                                    value="cartao"
+                                    required=""
+                                    checked="checked">
+                                <label class="custom-control-label" for="credit">Crédito/Débito</label>
                             </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
+                            <div class="custom-control custom-radio">
+                                <input
+                                    id="debit"
+                                    name="paymentMethod"
+                                    type="radio"
+                                    class="custom-control-input"
+                                    value="dinheiro"
+                                    required="">
+                                <label class="custom-control-label" for="debit">Dinheiro</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Calabresa</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Calabresa e Cebola</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 15,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="15">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="15">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 28,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="28">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="28">Inteira
-                                </button>
+                        <div class="row">
+                            <div class="col-md-12 mb-3 troco-pedido" style="display:none">
+                                <label for="cc-name">Troco</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="troco_pedido"
+                                    placeholder=""
+                                    required="">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Baiana</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Mussarela, Calabresa Moida, Cebola e Pimenta Dedo de
-                                moça</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 15,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="15">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="15">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 28,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="28">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="28">Inteira
-                                </button>
+                        <div class="row">
+                            <div class="col-md-12 mb-3 troco-pedido">
+                                <label for="cc-name">Observações</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="observacoes"
+                                    placeholder=""
+                                    required="">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Calabresa com Requeijão</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Calabresa, Requeijão e Cebola</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 15,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="15">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="15">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 28,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="28">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="28">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Presunto e Mussarela</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Presunto Tomate e Mussarela</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 16,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="16">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="16">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 30,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="30">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="30">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Presunto Especial</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Presunto, Tomate, Requeijão, Mussarela e Bacon</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Portuguesa</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Presunto, Ervilha, Palmito, Ovo, Mussarela, Bacon e
-                                Cebola</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Frango com Bacon</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Frango, Mussarela e Bacon</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 17,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="17">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="17">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 33,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="33">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="33">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Frango com Requeijão</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Frango Requeijão e Mussarela</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Caipira</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Frango, Creme de Milho, Mussarela e Bacon</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Brocolis</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Brocolis, Requeijão, Tomate, Mussarela e Bacon</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 34,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="34">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="34">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Vegetariana</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Brocolis, Palmito, Ervilha e Mussarela</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 16,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="16">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="16">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 30,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="30">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="30">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Serrana</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Lombo Canadense, Creme de Milho e Mussarela</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Lombo</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>Molho de Tomate, Orégano, Azeitona, Lombo Canadense, Requeijão e Mussarela</li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-broto">
-                                <h4>Broto R$ 18,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaBroto" data-preco="18">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraBroto"
-                                    data-preco="18">Inteira
-                                </button>
-                            </div>
-                            <div class="div-grande">
-                                <h4>Grande R$ 35,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheMeiaGrande" data-preco="35">Meia
-                                </button>
-
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="35">Inteira
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" id="fazer-pedido">Finalizar pedido</button>
+                    </form>
                 </div>
             </div>
         </div>
-
-
-        <div class="row text-center">
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Trufa</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li></li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-grande">
-                                <h4>R$ 2,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="2">Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Pão de Mel</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li></li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-grande">
-                                <h4>R$ 2,50</h4>
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="2.5">Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Petit Gateau (Só bolinho)</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li></li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-grande">
-                                <h4>R$ 3,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="3">Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Cone Trufado</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li></li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-grande">
-                                <h4>R$ 2,50</h4>
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="2.5">Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow-sm card-pizza col-md-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal sabor-pizza">Brownie</h4>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li></li>
-                        </ul>
-                        <div class="button-card col-md-12">
-                            <div class="div-grande">
-                                <h4>R$ 3,00</h4>
-                                <button type="button" class="btn btn-primary btnEscolheInteiraGrande"
-                                    data-preco="3">Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container" id="divFinalizaPedido" style="display:none">
-        <div class="row">
-            <div class="col-md-4 order-md-2 mb-4">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Seu carrinho</span>
-                </h4>
-                <ul class="list-group mb-3" id="ul-carrinho">
-
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>Total</span>
-                        <strong id="valor-total">R$ 0</strong>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-8 order-md-1">
-                <h4 class="mb-3">Dados de entrega</h4>
-                <form class="needs-validation" novalidate="">
-                    <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
-                            <input id="ret-local" name="metodoEntrega" type="radio" class="custom-control-input"
-                                value="retirar no local" required="" checked>
-                            <label class="custom-control-label" for="ret-local">Retirada no local</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="delivery" name="metodoEntrega" type="radio" class="custom-control-input"
-                                value="delivery" required="">
-                            <label class="custom-control-label" for="delivery">Delivery</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <label for="firstName">Seu nome</label>
-                            <input type="text" class="form-control" id="nome_pedido" placeholder="" value=""
-                                required="">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <label for="firstName">Telefone de contato</label>
-                            <input type="text" class="form-control" id="telefone_pedido" placeholder="" value=""
-                                required="">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dados-delivery" style="display:none">
-                        <div class="mb-3">
-                            <label for="address">Endereço de entrega</label>
-                            <input type="text" class="form-control" id="endereco_pedido"
-                                placeholder="Rua exemplo, numero 123, centro" required="">
-                            <div class="invalid-feedback">
-                                Please enter your shipping address.
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="address">Bairro</label>
-                            <select class="form-control" id="bairro_pedido">
-                                <option value="0">Selecione</option>
-                                <option value="4">CECAP</option>
-                                <option value="3">COLORADO </option>
-                                <option value="3">JARDIM ANTUNES</option>
-                                <option value="3">JARDIM ASTURIA</option>
-                                <option value="3">JARDIM BIANCO </option>
-                                <option value="4">JARDIM BURITIS</option>
-                                <option value="3">JARDIM DAS OLIVEIRAS</option>
-                                <option value="4">JARDIM MACEDO</option>
-                                <option value="3">JARDIM MARIA LUCIA</option>
-                                <option value="5">JARDIM NUNES 1</option>
-                                <option value="6">JARDIM NUNES 2</option>
-                                <option value="6">JARDIM SANTO ANTONIO</option>
-                                <option value="6">JARDIM SIMOES</option>
-                                <option value="4">MACEDO TELES 1</option>
-                                <option value="4">MACEDO TELES 2</option>
-                                <option value="4">PARQUE RESIDENCIAL LARIANO TEBER</option>
-                                <option value="4">RESIDECIAL PALESTRA</option>
-                                <option value="3">RESIDENCIAL ANA ANGELICA</option>
-                                <option value="3">RESIDENCIAL BOM SUCESSO</option>
-                                <option value="3">RESIDENCIAL ETEMP</option>
-                                <option value="3">RESIDENCIAL GABRIELA</option>
-                                <option value="3">RESIDENCIAL MARIA ZORITA</option>
-                                <option value="3">RESIDENCIAL MONTE VERDE</option>
-                                <option value="4">RESIDENCIAL SÃO TOMAS 1</option>
-                                <option value="4">RESIDENCIAL SÃO TOMAS 2</option>
-                                <option value="3">SALO SAGRADO</option>
-                                <option value="4">VETORAZZO</option>
-                                <option value="3">VILA BURGUESE 1</option>
-                                <option value="3">VILA BURGUESE 2 </option>
-                                <option value="3">VILA BURGUESE 3</option>
-                                <option value="3">VILA MAFALDA</option>
-                                <option value="3">VILA MAFALDA 2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <h4 class="mb-3">Pagamento</h4>
-
-                    <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
-                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input"
-                                value="cartao" required="" checked>
-                            <label class="custom-control-label" for="credit">Crédito/Débito</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
-                                value="dinheiro" required="">
-                            <label class="custom-control-label" for="debit">Dinheiro</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 mb-3 troco-pedido" style="display:none">
-                            <label for="cc-name">Troco</label>
-                            <input type="text" class="form-control" id="troco_pedido" placeholder="" required="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 mb-3 troco-pedido">
-                            <label for="cc-name">Observações</label>
-                            <input type="text" class="form-control" id="observacoes" placeholder="" required="">
-                        </div>
-                    </div>
-                    <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" id="fazer-pedido">Finalizar pedido</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-<script>
-    $(function () {
-        $("#nav-placeholder").load("_Layout.html");
-    });
-</script>
+    </body>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("_Layout.html");
+        });
+    </script>
 
 </html>

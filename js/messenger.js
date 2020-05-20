@@ -55,6 +55,24 @@ $(document).ready(function () {
             preco = 0;
             console.log(carrinho);
         })
+        .on("click", ".btnEscolhe", function () {
+            inteira = $(this).closest(".card-pizza").find(".sabor-pizza").text();
+            bootbox.alert("Você adicionou " + inteira + " ao carrinho");
+            preco += parseFloat($(this).attr("data-preco"));
+            carrinho.push({
+                tipo: "-",
+                meia1: meia1,
+                meia2: meia2,
+                inteira: inteira,
+                preco: preco
+            })
+
+            meia1 = "";
+            meia2 = "";
+            inteira = "";
+            preco = 0;
+            console.log(carrinho);
+        })
 
         .on("click", ".btnEscolheMeiaGrande", function () {
             if (meia1 == "") {
