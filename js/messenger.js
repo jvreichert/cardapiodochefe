@@ -134,6 +134,8 @@ $(document).ready(function () {
                 meia2 = "";
                 inteira = "";
                 preco = 0;
+                promocao = false;
+                precoPromocao = 0;
                 $(".btnEscolheInteiraGrande").slideDown();
                 $(".div-broto").slideDown();
                 $(".divAdicionais").slideDown();
