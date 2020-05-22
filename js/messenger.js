@@ -223,7 +223,7 @@ $(document).ready(function () {
 
             whatsappMessage = window.encodeURIComponent(whatsappMessage);
             window.open(
-                'https://api.whatsapp.com/send?phone=+5517991055329&text=' + whatsappMessage,
+                'https://api.whatsapp.com/send?phone=+5517991259723&text=' + whatsappMessage,
                 '_blank'
             );
         })
