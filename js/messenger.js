@@ -153,7 +153,13 @@ $(document).ready(function () {
             bootbox.alert(
                 "Você adicionou " + inteira + "(inteira grande) ao carrinho"
             );
-            preco += parseFloat($(this).attr("data-preco"));
+
+            if ($(this).hasClass("tagPromocao")) {
+                preco = parseFloat($(this).attr("data-preco_promocao"))
+            } else {
+                preco += parseFloat($(this).attr("data-preco"));
+            }
+
             carrinho.push(
                 {tipo: "Grande", meia1: meia1, meia2: meia2, inteira: inteira, preco: preco}
             )
